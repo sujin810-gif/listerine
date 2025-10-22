@@ -137,7 +137,7 @@ nav ul li:hover .submenu {display: flex; height: auto; opacity: 1; visibility: v
         transform: translateZ(0);
     }
 }
-.main_vs .letter .more_btn .btn {width: 29px; height: 29px; border-radius: 30px; background: #1c1c1c url(images/arrow_moreview.png) no-repeat center center; transition: translateX .6s;}
+.main_vs .letter .more_btn .btn {width: 29px; height: 29px; border-radius: 30px; background: #1c1c1c url(../images/arrow_moreview.png) no-repeat center center; transition: translateX .6s;}
 .main_vs .letter .prd_name {font-size: 1.6rem; color: #B7B7B7; font-weight: 500; position: relative; right: 670px; top: 40px;}
 
 
@@ -234,7 +234,7 @@ nav ul li:hover .submenu {display: flex; height: auto; opacity: 1; visibility: v
 
 /* 구강 케어 */
 .oral_care {width: 100%; height: 100vh; margin-top: 1000px; }
-.oral_care .img {width: 100%; height: 100vh; background: linear-gradient(rgba(0, 0, 0, 0.327), rgba(0, 0, 0, 0.3)), url(images/last_img.webp) no-repeat center; background-attachment: fixed;}
+.oral_care .img {width: 100%; height: 100vh; background: linear-gradient(rgba(0, 0, 0, 0.327), rgba(0, 0, 0, 0.3)), url(../images/last_img.webp) no-repeat center; background-attachment: fixed;}
 .oral_care .letter {text-align: center; position: relative; bottom: 550px; }
 .oral_care .letter .text-container {font-size: 10rem; font-weight: 800; color: #fff; position: relative; display: inline-block; overflow: hidden;}
 #text { display: block; font-size: 10rem; text-align: center; font-weight: 800;}
