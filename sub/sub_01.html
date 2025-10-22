@@ -9,21 +9,315 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
-<body>
+<body class="sub_01">
     <!-- Navigation -->
     <nav>
         <div class="menu">
             <ul>
-                <li><a href="#">Brand</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Oral Care</a></li>
-                <li><a href="#">Why LISTERINE?</a></li>
+                <li><a href="javascript:void()">Brand</a></li>
+                <li><a href="sub_01.html">Products</a></li>
+                <li>
+                    <a href="javascript:void()">Oral Care</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void()">구취</a></li>
+                        <li><a href="javascript:void()">잇몸질환</a></li>
+                        <li><a href="javascript:void()">플라그</a></li>
+                        <li><a href="javascript:void()">치아 미백</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void()">Why LISTERINE?</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void()">구강청결제의 필요성</a></li>
+                        <li><a href="javascript:void()">어린이 안전캡</a></li>
+                        <li><a href="javascript:void()">친환경적 발걸음</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
-        <div class="buy"><a href="#"><img src="../images/ico_buy.png" alt="">BUY</a></div>
+        <div class="buy"><a href="javascript:void()"><img src="../images/ico_buy.png" alt="">BUY</a></div>
     </nav>
     <header>
-        <h1 style="cursor:pointer;"><a href="#"><img src="../images/logo.svg" alt=""></a></h1>
+        <h1 style="cursor:pointer;"><a href="javascript:void()"><img src="../images/logo.svg" alt=""></a></h1>
     </header>
+    <section class="sub_01_sc">
+        <div class="tit_wrap">
+            <div class="tit" id="sub_tit">PRODUCTS</div>
+            <p>원하는 취향에 따라 제품을 만나보세요.</p>
+        </div>
+        <!-- 제품 카테고리 메뉴 -->
+        <div class="prd-menu">
+            <ul>
+                <li><a href="javascript:void(0)" data-category="all" class="active">전체</a></li>
+                <li><a href="javascript:void(0)" data-category="total">토탈케어</a></li>
+                <li><a href="javascript:void(0)" data-category="smile">미소케어</a></li>
+                <li><a href="javascript:void(0)" data-category="gum">잇몸케어</a></li>
+                <li><a href="javascript:void(0)" data-category="cavity">충치케어</a></li>
+                <li><a href="javascript:void(0)" data-category="strong">강한맛</a></li>
+                <li><a href="javascript:void(0)" data-category="mild">순한맛</a></li>
+                <li><a href="javascript:void(0)" data-category="basic">기본향</a></li>
+                <li><a href="javascript:void(0)" data-category="flavored">유향</a></li>
+            </ul>
+        </div>
+    
+        <!-- 제품 리스트 -->
+        <div class="prd">
+            <ul>
+                <li data-category="total,mild,basic">
+                    <a href="javascript:void(0)" class="card">
+                        <div class="img"><img src="../images/prd_purple.webp" alt=""></div>
+                        <div class="letter">
+                            <p>리스테린®액<br>토탈케어 마일드</p>
+                            <div>
+                                <div class="flavor">
+                                    <span>순한맛</span>
+                                    <span>기본향</span>
+                                </div>
+                                <div class="carename">6 in 1 토탈케어</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li data-category="total,strong,basic">
+                    <a href="javascript:void(0)" class="card">
+                        <div class="img"><img src="../images/prd_deeppurple.webp" alt=""></div>
+                        <div class="letter">
+                            <p>리스테린®액<br>토탈케어 플러스</p>
+                            <div>
+                                <div class="flavor">
+                                    <span>강한맛</span>
+                                    <span>기본향</span>
+                                </div>
+                                <div class="carename">6 in 1 토탈케어</div>
+                            </div>
+                        </div>
+                    </a>
+                </li><li data-category="mild,gum,basic">
+                    <a href="javascript:void(0)" class="card">
+                        <div class="img"><img src="../images/prd_yellow.webp" alt=""></div>
+                        <div class="letter">
+                            <p>리스테린®액<br>토탈케어 검케어 마일드</p>
+                            <div>
+                                <div class="flavor">
+                                    <span>순한맛</span>
+                                    <span>기본향</span>
+                                </div>
+                                <div class="carename">잇몸케어</div>
+                            </div>
+                        </div>
+                    </a>
+                </li><li data-category="mild,cavity,basic">
+                    <a href="javascript:void(0)" class="card">
+                        <div class="img"><img src="../images/prd_ocean.webp" alt=""></div>
+                        <div class="letter">
+                            <p>리스테린®액<br>토탈케어<br>캐비티케어 마일드</p>
+                            <div>
+                                <div class="flavor">
+                                    <span>순한맛</span>
+                                    <span>기본향</span>
+                                </div>
+                                <div class="carename">충치케어</div>
+                            </div>
+                        </div>
+                    </a>
+                </li><li data-category="strong,smile,basic">
+                    <a href="javascript:void(0)" class="card">
+                        <div class="img"><img src="../images/prd_white.webp" alt=""></div>
+                        <div class="letter">
+                            <p>리스테린®액<br>토탈케어 헬씨브라이트</p>
+                            <div>
+                                <div class="flavor">
+                                    <span>강한맛</span>
+                                    <span>기본향</span>
+                                </div>
+                                <div class="carename">미소케어</div>
+                            </div>
+                        </div>
+                    </a>
+                </li><li data-category="total,mild,flavored">
+                    <a href="javascript:void(0)" class="card">
+                        <div class="img"><img src="../images/prd_green.webp" alt=""></div>
+                        <div class="letter">
+                            <p>리스테린®액<br>내추럴 그린티 마일드</p>
+                            <div>
+                                <div class="flavor">
+                                    <span>순한맛</span>
+                                    <span>녹차향</span>
+                                </div>
+                                <div class="carename">5 in 1 토탈케어</div>
+                            </div>
+                        </div>
+                    </a>
+                </li><li data-category="total,strong,flavored">
+                    <a href="javascript:void(0)" class="card">
+                        <div class="img"><img src="../images/prd_deepblue.webp" alt=""></div>
+                        <div class="letter">
+                            <p>리스테린®액<br>쿨민트 마우스워시</p>
+                            <div>
+                                <div class="flavor">
+                                    <span>강한맛</span>
+                                    <span>민트향</span>
+                                </div>
+                                <div class="carename">4 in 1 토탈케어</div>
+                            </div>
+                        </div>
+                    </a>
+                </li><li data-category="total,mild,flavored">
+                    <a href="javascript:void(0)" class="card">
+                        <div class="img"><img src="../images/prd_blue.webp" alt=""></div>
+                        <div class="letter">
+                            <p>리스테린®액<br>쿨민트 마일드</p>
+                            <div>
+                                <div class="flavor">
+                                    <span>순한맛</span>
+                                    <span>민트향</span>
+                                </div>
+                                <div class="carename">4 in 1 토탈케어</div>
+                            </div>
+                        </div>
+                    </a>
+                </li><li data-category="total,strong,flavored">
+                    <a href="javascript:void(0)" class="card">
+                        <div class="img"><img src="../images/prd_deepgreen.webp" alt=""></div>
+                        <div class="letter">
+                            <p>리스테린®액<br>후레쉬 버스트</p>
+                            <div>
+                                <div class="flavor">
+                                    <span>강한맛</span>
+                                    <span>스피어민트향</span>
+                                </div>
+                                <div class="carename">4 in 1 토탈케어</div>
+                            </div>
+                        </div>
+                    </a>
+                </li><li data-category="total,strong,flavored">
+                    <a href="javascript:void(0)" class="card">
+                        <div class="img"><img src="../images/prd_orange.webp" alt=""></div>
+                        <div class="letter">
+                            <p>리스테린®액<br>마우스워시 시트러스향</p>
+                            <div>
+                                <div class="flavor">
+                                    <span>강한맛</span>
+                                    <span>시트러스향</span>
+                                </div>
+                                <div class="carename">3 in 1 토탈케어</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script>
+            // ✅ 제목 애니메이션 (페이지 로드시 바로 실행)
+            document.addEventListener('DOMContentLoaded', function () {
+                const container = document.getElementById('sub_tit');
+                if (container && !container.classList.contains('animated')) {
+                    const text = container.textContent;
+                    container.textContent = "";
+                    text.split("").forEach((charr, index) => {
+                        const span = document.createElement("span");
+                        span.textContent = charr;
+                        span.classList.add("charr");
+                        if (charr === " ") span.classList.add("space");
+                        span.style.animationDelay = `${index * 0.1}s`;
+                        container.appendChild(span);
+                    });
+                    container.classList.add('animated');
+                }
+            });
+
+            // ✅ 제품 필터링 기능
+            $(document).ready(function () {
+                    $('.prd-menu a').on('click', function () {
+                        const category = $(this).data('category');
+
+                        // 메뉴 활성화 표시
+                        $('.prd-menu a').removeClass('active');
+                        $(this).addClass('active');
+
+                        // 전체일 때
+                        if (category === 'all') {
+                            $('.prd ul li').fadeIn(400).removeClass('hide');
+                        } else {
+                            $('.prd ul li').each(function () {
+                                // 현재 li의 data-category를 배열로 나눔
+                                const itemCats = $(this).data('category').split(',');
+                                // 클릭한 카테고리가 포함되어 있으면 보여주기
+                                if (itemCats.includes(category)) {
+                                    $(this).fadeIn(400).removeClass('hide');
+                                } else {
+                                    $(this).fadeOut(300).addClass('hide');
+                                }
+                            });
+                        }
+                    });
+                });
+        </script>
+    </section>
+    <!-- 푸터 -->
+    <footer class="sub_footer">
+        <div class="sns">
+            <a href="http://youtube.com/@Listerinekorea/videos" target='_blank'><img src="../images/ico_ytube.png" alt=""></a>
+            <a href="https://www.instagram.com/listerine.kr/" target='_blank'><img src="../images/ico_insta.png" alt=""></a>
+        </div>
+        <div class="site">
+            <div class="company">
+                <div class="tit">Company</div>
+                <ul>
+                    <li><a href="javascript:void()">Contact us</a></li>
+                    <li><a href="javascript:void()">공지사항</a></li>
+                </ul>
+            </div>
+            <div class="Legal">
+                <div class="tit">Legal</div>
+                <ul>
+                    <li><a href="javascript:void()">법적 고지</a></li>
+                    <li><a href="javascript:void()">개인정보처리방침</a></li>
+                    <li><a href="javascript:void()">사이트맵</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>한국존슨앤드존슨판매(유) | 서울특별시 용산구 한강대로 92 LS용산타워 27층 | 대표이사 : 백준혁 | 대표전화 : 080-377-0900 (수신자부담)</p>
+            <p>Copyright&copy; 2025 Kenvue Inc. All rights reserved.</p>
+            <p>이 사이트는 대한민국 사용자만을 위해 한국존슨앤드존슨판매(유)에서 제작하였으며 내용상 모든 책임은 한국존슨앤드존슨판매(유)에 있습니다.</p>
+        </div>
+    </footer>
+    <script>
+        function animateTextBySpan(id, textContent = null) {
+            const container = document.getElementById(id);
+            if (!container) return;
+
+            const rect = container.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                if (!container.classList.contains('animated')) {
+                    const text = textContent || container.textContent;
+                    container.textContent = "";
+                    text.split("").forEach((charr, index) => {
+                        const span = document.createElement("span");
+                        span.textContent = charr;
+                        if (charr === " ") {
+                            span.classList.add("charr", "space");
+                        } else {
+                            span.classList.add("charr");
+                            span.style.animationDelay = `${index * 0.1}s`;
+                        }
+                        container.appendChild(span);
+                    });
+                    container.classList.add('animated');
+                }
+            }
+        }
+
+        // ✅ 페이지가 로드되자마자 실행
+        document.addEventListener('DOMContentLoaded', function () {
+            animateTextBySpan('sub_tit');
+        });
+
+        // ✅ 스크롤 시에도 다시 실행 (혹시 다른 위치에서 사용될 수도 있으니까)
+        window.addEventListener('scroll', function () {
+            animateTextBySpan('sub_tit');
+        });
+    </script>
 </body>
 </html>

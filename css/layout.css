@@ -146,16 +146,15 @@ nav ul li:hover .submenu {display: flex; height: auto; opacity: 1; visibility: v
 /* 제품 */
 .content {width: 100%; height: 1120px; border-radius: 80px 80px 0 0; background-color: #A2E0E2; position: absolute; top: 1080px; }
 .Products .tit {font-size: 4.8rem; font-weight: 800; text-align: center; margin-top: 160px; margin-bottom: 80px;}
-/* .Products .tit.active {opacity: 1; transform: translateY(0);} */
 
 
 .Products .items {max-width: 1300px; margin: 0 auto;}
 .Products .slider {display: flex; max-width: 970px; margin: 0 auto;;}
-.Products .slider a img {opacity: 0; transform: translateY(80px) scale(1); transition: opacity 1s ease, transform .18s ease;}
-.Products .slider li a:hover img {transform: translateY(0) scale(1.05); transition: transform .18s ease;}
-.Products .slider a img.active {opacity: 1;
+.Products .slider li {opacity: 0; transition: transform .6s; transform: translateY(60px); transition: opacity 1s ease, transform 1s ease;}
+.Products .slider li.active {
+    opacity: 1;
     transform: translateY(0) scale(1);
-    transition: opacity 1s ease, transform 1s ease;
+    
 }
 
 .Products .slider li a {width: 310px; height: 480px; background-color: #fff; display: flex; flex-direction: column; border-radius: 40px; margin: 0 auto; transition: transform .15s ease;}
@@ -181,6 +180,70 @@ nav ul li:hover .submenu {display: flex; height: auto; opacity: 1; visibility: v
     transform: scale(.9);
     }
 }
+
+/* --- 카드 뒤집힘 효과 --- */
+.flip-card {
+    width: 310px;
+    height: 480px;
+    perspective: 1000px;
+    margin: 0 auto;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    border-radius: 40px;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+/* 앞면 기존 스타일 유지 */
+.flip-front {
+    background-color: #fff;
+}
+
+/* 뒷면 */
+.flip-back {
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.flip-back a {background: linear-gradient(325deg, #10979e, #56d6dd,  #c4fcff); display: flex; justify-content: center;}
+
+.flip-back .back-content {
+    padding: 30px;
+}
+
+.flip-back a h3 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* 기존 hover 효과 제거 (겹침 방지) */
+.Products .slider li a:hover img {
+    transform: none;
+}
+
+
 
 /* 왜 리스테린? */
 .reason_wrap {width: 100%; height: 980px; background: #169056; border-radius: 80px; position: absolute; margin-top: 80px; overflow: hidden;}
@@ -211,7 +274,9 @@ nav ul li:hover .submenu {display: flex; height: auto; opacity: 1; visibility: v
 .reason .cont .num > div p.active {
     clip-path: inset(0 0 0 0);
     opacity: 1;
-}@keyframes width {
+}
+
+@keyframes width {
     0% {
         width: 0;
     }
@@ -301,4 +366,62 @@ footer .site {display: flex;}
 footer .copyright {margin-top: 100px;}
 footer .copyright p {margin-top: 5px;}
 
+
+
+
+
 /* 서브 1 */
+.sub_01 {background-color: #F9F6EB;}
+.sub_01 .tit_wrap {margin: 0 auto; margin-top: 160px; text-align: center;}
+.sub_01 .tit_wrap .tit {font-size: 7.2rem; font-weight: 800; color: #1c1c1c; position: relative; display: inline-block; overflow: hidden; font-family: 'Taenada';}
+#sub_tit { display: inline-block; font-size: 7.2rem; text-align: center; font-family: 'Taenada';}
+
+.charr {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: riseUp 0.6s forwards;
+    font-family: 'Taenada';
+}
+.charr.space {
+    display: inline-block;
+    width: 0.2em; /* 원하는 공백 크기 */
+    opacity: 1; /* 공백은 애니메이션 없이 바로 보이도록 */
+    transform: none;
+    animation: none;
+}
+
+.sub_01 .tit_wrap p {font-size: 1.8rem; font-weight: 500;}
+
+.sub_01 .prd-menu {margin: 0 auto; max-width: 1300px; display: flex; justify-content: center; align-items: center; margin-top: 80px;}
+.sub_01 .prd-menu ul {display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;}
+.sub_01 .prd-menu a {font-size: 2rem; font-weight: 600; text-align: center; background-color: #fff; border-radius: 30px; border: 1px solid #BFBFBF; padding: 10px 20px; box-sizing: border-box; transition: 0.3s;;}
+.prd-menu a.active {background-color: #1c1c1c; color: #fff; border-color: #1c1c1c;}
+
+
+
+/* 제품 리스트 */
+.sub_01 .prd { max-width: 1300px; margin: 0 auto; margin-top: 50px;}
+.sub_01 .prd .card {max-width: 640px; min-height: 366px; background-color: #fff; display: flex; align-items: center; border-radius: 40px; border: 2px solid #E2E2E2;}
+.sub_01 .prd .card .img { width: 257px; height: 336px; background-color: #E2E2E2; margin-left: 12px; border-radius: 40px; display: flex; align-items: center; justify-content: center;}
+.sub_01 .prd .card img {width: 170px; height: 298px;}
+.sub_01 .prd .card p {font-size: 3.2rem; color: #1c1c1c; margin-bottom: 120px; font-weight: 600;}
+.sub_01 .prd .card span {font-size: 2rem; color: #4E4E4E; background-color: #fff; border-radius: 30px; border: 1px solid #BFBFBF; padding: 3px 15px; box-sizing: border-box; font-weight: 600;}
+.sub_01 .prd .card span:last-child {background-color: #E5E5E5; color: #303030;}
+.sub_01 .prd .letter {margin-left: 20px;}
+.sub_01 .prd .letter > div {display: inline-block; flex-direction: column;}
+.sub_01 .prd .letter .carename {display: inline-block; font-size: 2rem; font-weight: 500; color: #fff; padding: 3px 15px; box-sizing: border-box; background-color: #B36BD0; border-radius: 30px; border: 1px solid #BFBFBF; margin-top: 10px;}
+
+.prd ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2열 */
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .prd ul {
+        grid-template-columns: 1fr; /* 모바일 1열 */
+    }
+}
+
+.sub_footer {position: static; margin-top: 160px;}
