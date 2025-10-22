@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listerine</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link href="css/fixed-positioning.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Brand</a></li>
+                <li><a href="#">Products</a></li>
+                <li>
+                    <a href="#">Oral Care</a>
+                    <ul class="submenu">
+                        <li><a href="#">구취</a></li>
+                        <li><a href="#">잇몸질환</a></li>
+                        <li><a href="#">플라그</a></li>
+                        <li><a href="#">치아 미백</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Why LISTERINE?</a>
+                    <ul class="submenu">
+                        <li><a href="#">구강청결제의 필요성</a></li>
+                        <li><a href="#">어린이 안전캡</a></li>
+                        <li><a href="#">친환경적 발걸음</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="buy"><a href="#"><img src="images/ico_buy.png" alt="">BUY</a></div>
+    </nav>
+    <!-- Main Visual -->
+    <div class="main_container" id="slider">
+        <header>
+            <h1 style="cursor:pointer;"><a href="#"><img src="images/logo.svg" alt=""></a></h1>
+        </header>
+        <section class="main_vs">
+            <div class="main_img"><img src="images/main_vs_img.png" alt=""></div>
+            <div class="letter">
+                <div class="txt_wrap">
+                    <p>Listerine,</p>
+                    <p>Your Routine.</p>
+                </div>
+                <p class="cont">1860년 소독제로 살균된 수술실에서 수술을 집도한 최초의 외과의사 Dr. Joseph Lister의 이름에서 유래된 리스테린은 130년이 넘는 시간동안 구강청결제 분야를 선도해 왔습니다.</p>
+                <div class="more_btn"><a href="#"><p>브랜드 알아보기</p><div class="btn"></div></a></div>
+                <p class="prd_name">제품 리스테린®액 토탈케어 플러스</p>
+            </div>
+        </section>
+    </div>
+    <!-- Products -->
+    <section class="content" id="overflow">
+        <div class="Products">
+            <div class="tit" id="products-tit">Products</div>
+            <div class="items">
+                <ul class="indi">
+                    <li class="prevArrow"><img src="images/arrow_left.png" alt=""></li>
+                    <li class="nextArrow"><img src="images/arrow_right.png" alt=""></li>
+                </ul>
+                <ul class="slider">
+                    <li><a href="#"><img src="images/prd_deepblue.webp" alt=""><div><p>강한맛</p><p>민트향</p></div></a></li>
+                    <li><a href="#"><img src="images/prd_blue.webp" alt=""><div><p>약한맛</p><p>민트향</p></div></a></li>
+                    <li><a href="#"><img src="images/prd_orange.webp" alt=""><div><p>강한맛</p><p style="background-color: #FF7F4B;">시트러스향</p></div></a></li>
+                    <li><a href="#"><img src="images/prd_deeppurple.webp" alt=""><div><p>강한맛</p><p style="background-color: #E5E5E5; color: #1c1c1c;">기본향</p></div></a></li>
+                    <li><a href="#"><img src="images/prd_purple.webp" alt=""><div><p>약한맛</p><p style="background-color: #E5E5E5; color:#1c1c1c ;">기본향</p></div></a></li>
+                    <li><a href="#"><img src="images/prd_deepgreen.webp" alt=""><div><p>강한맛</p><p style="background-color: #00DE9B;">스피어민트향</p></div></a></li>
+                </ul>
+            </div>
+            <div class="more_btn"><a href="#">제품 더보기</a></div>
+            <!-- 슬라이더 -->
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+            <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            <script>
+                $('.slider').slick({
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    prevArrow: $('.prevArrow'),
+                    nextArrow: $('.nextArrow'),
+                });
+            </script>
+        </div>
+        <!-- 왜 리스테린? -->
+        <div class="reason_wrap">
+            <div class="reason">
+                <img class="Circle" src="imagesimg_circle.png" alt="">
+                <div class="tit">Why choose <span>LISTERINE?</span></div>
+                <div class="cont">
+                    <div class="num">
+                        <span>1</span>
+                        <div>
+                            <div>
+                                <p>칫솔이 닿지 않는 입안 구석, 그냥 두지 마세요.</p>
+                            </div>
+                            <div>
+                                <p>리스테린은 하루 두 번, 30초로 입안을 더 깊고 상쾌하게 씻어냅니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num">
+                        <span>2</span>
+                        <div>
+                            <div>
+                                <p>어른에게는 간편하게, 아이에게는 안전하게.</p>
+                            </div>
+                            <div>
+                                <p>리스테린의 안전캡은 가족의 안전까지 고려했습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="num">
+                        <span>3</span>
+                        <div>
+                            <div>
+                                <p>당신의 구강 건강은 물론, 지구의 내일도 함께 챙깁니다.</p>
+                            </div>
+                            <div>
+                                <p>리스테린은 재활용 가능한 포장과 믿을 수 있는 성분만을 담아요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more_btn"><a href="#">자세히 알아보기</a></div>
+            </div>
+        </div>
+        <!-- 구강케어 -->
+        <div class="oral_care">
+            <div class="img"></div>
+            <div class="letter">
+                <a href="#" class="text-container" id="text">Oral Care</a>
+                <a href="#"><span>입 속부터 상쾌하게! 리스테린과 함께 알아보는 치아 건강 상식</span></a>
+                <div class="arrow"><a href="#"><img src="images/last_arrow.png" alt=""></a></div>
+            </div>
+        </div>
+        <!-- 푸터 -->
+        <footer>
+            <div class="sns">
+                <a href="http://youtube.com/@Listerinekorea/videos" target='_blank'><img src="images/ico_ytube.png" alt=""></a>
+                <a href="https://www.instagram.com/listerine.kr/" target='_blank'><img src="images/ico_insta.png" alt=""></a>
+            </div>
+            <div class="site">
+                <div class="company">
+                    <div class="tit">Company</div>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </div>
+                <div class="Legal">
+                    <div class="tit">Legal</div>
+                    <ul>
+                        <li><a href="#">법적 고지</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>한국존슨앤드존슨판매(유) | 서울특별시 용산구 한강대로 92 LS용산타워 27층 | 대표이사 : 백준혁 | 대표전화 : 080-377-0900 (수신자부담)</p>
+                <p>Copyright&copy; 2025 Kenvue Inc. All rights reserved.</p>
+                <p>이 사이트는 대한민국 사용자만을 위해 한국존슨앤드존슨판매(유)에서 제작하였으며 내용상 모든 책임은 한국존슨앤드존슨판매(유)에 있습니다.</p>
+            </div>
+        </footer>
+    </section>
+    
+
+    <!-- 패럴랙스 -->
+    <script>
+        var ovf, slider;
+
+        $(function () {
+            ovf = this.getElementById("overflow");
+            slider = this.getElementById("slider");
+            winResize();
+            $(window).bind({ resize: winResize, scroll: winScroll });
+        });
+
+        function winResize() {
+            ovf.style.top = slider.offsetHeight + "px";
+        }
+
+        function winScroll() {
+            var op = 1 - (window.pageYOffset / slider.offsetHeight);
+            slider.style.opacity = op;
+        }
+    </script>
+    <!-- 스크롤시 문지 나타남 -->
+    <script>
+        window.addEventListener('scroll', function () {
+            // 모든 타겟 요소를 배열로 선택
+            const targets = [
+                document.querySelector('.Products .tit'),
+                document.querySelector('.Products .more_btn a'),
+                ...document.querySelectorAll('.reason .cont .num > div p '),
+                ...document.querySelectorAll('.Products .slider a img'),
+                ...document.querySelectorAll('.reason .tit'),
+            ];
+
+            targets.forEach(tit => {
+                if (!tit) return; // 요소가 없으면 건너뜀
+                const rect = tit.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    tit.classList.add('active');
+                } else {
+                    tit.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    <!-- 구강케어 텍스트 -->
+    <script>
+        function animateTextBySpan(id, textContent = null) {
+            const container = document.getElementById(id);
+            if (!container) return;
+
+            const rect = container.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                if (!container.classList.contains('animated')) {
+                    const text = textContent || container.textContent;
+                    container.textContent = "";
+                    text.split("").forEach((char, index) => {
+                        const span = document.createElement("span");
+                        span.textContent = char;
+                        if (char === " ") {
+                            span.classList.add("char", "space");
+                        } else {
+                            span.classList.add("char");
+                            span.style.animationDelay = `${index * 0.1}s`;
+                        }
+                        container.appendChild(span);
+                    });
+                    container.classList.add('animated');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', function () {
+            animateTextBySpan('text'); // Oral Care
+            animateTextBySpan('products-tit'); // Products
+        });
+    </script>
+</body>
+</html>
