@@ -39,6 +39,7 @@
         </div>
         <div class="buy"><a href="javascript:void()"><img src="images/ico_buy.png" alt="">BUY</a></div>
     </nav>
+    <div class="hamburger"></div>
     <!-- Main Visual -->
     <div class="main_container" id="slider">
         <header>
@@ -206,8 +207,19 @@
                     slidesToScroll: 3,
                     prevArrow: $('.prevArrow'),
                     nextArrow: $('.nextArrow'),
+                    responsive: [
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                arrows: false,
+                                centerMode: true,
+                                centerPadding: '-70px',
+                                slidesToShow: 1
+                            }
+                        },
+                    ]
                 });
-            </script>
+                    </script>
         </div>
         <!-- 왜 리스테린? -->
         <div class="reason_wrap">
