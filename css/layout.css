@@ -797,14 +797,16 @@ footer .copyright p {margin-top: 5px;}
         left: 24px;
     }
     /* 메인비주얼 */
-    .main_vs { height: 800px;}
+    .main_vs { height: 700px;}
     .main_vs .main_img img {
         display: none;
     }
-    .main_vs .letter .txt_wrap {margin-top: 60px;}
+    .main_vs .letter .txt_wrap {
+        margin-top: 20px;
+    }
     .main_vs .letter .cont {
         font-size: 2.4rem;
-        margin-top: 140px;
+        margin-top: 100px;
     }
     .main_vs .letter .more_btn p {
         font-size: 2.4rem;
@@ -832,18 +834,25 @@ footer .copyright p {margin-top: 5px;}
     
 }
 
-
 /* 모바일 */
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 520px) {
+    .main_vs .letter .txt_wrap p {
+        font-size: 6rem;
+    }
+    .main_vs .letter .cont {
+        margin-top: 100px;
+        font-size: 1.8rem;
+    }
     /* 메인비주얼 */
     .main_vs {
-        height: 700px;
+        height: 600px;
     }
+
     .main_vs .letter .txt_wrap {
         margin-top: 20px;
     }
     .main_vs .letter .cont {
-        margin-top: 40px;
+        margin-top: 80px;
         font-size: 2rem;
     }
     .main_vs .letter .more_btn p {
@@ -902,11 +911,11 @@ footer .copyright p {margin-top: 5px;}
     }
     /* 구강 */
     #text {
-        font-size: 8rem;
+        font-size: 5rem;
     }
     .oral_care .letter {padding: 0 24px; box-sizing: border-box;}
     .oral_care .letter a span {
-        font-size: 2.2rem;
+        font-size: 2rem;
         line-height: 150%;
     }
     /* footer */
@@ -932,12 +941,45 @@ footer .copyright p {margin-top: 5px;}
     }
 }
 
-@media only screen and (max-width: 459px) {
-    .main_vs .letter .txt_wrap p {
-        font-size: 6rem;
-    }
+@media only screen and (max-width: 390px) {
+    /* 메인 비주얼 */
     .main_vs .letter .cont {
-        margin-top: 180px;
         font-size: 1.8rem;
+    }
+    .main_vs .letter .txt_wrap p {
+        font-size: 5rem;
+    }
+    /*  제품 */
+    .Products .tit {
+        font-size: 4rem;
+        margin-top: 80px;
+    }
+    .Products .more_btn a {
+        margin-top: 120px;
+    }
+    /* 왜? */
+    .reason .tit span {
+        font-size: 4rem;
+    }
+    .reason .cont span {
+        font-size: 4rem;
+    }
+    .reason .cont .num > div p {
+        font-size: 1.8rem;
+    }
+    /* 구강 */
+    .oral_care .letter a span {
+        font-size: 1.8rem;
+    }
+    /* 푸터 */
+    footer .tit {
+        font-size: 2.8rem;
+    }
+    footer a {
+        font-size: 1.8rem;
+        line-height: 200%;
+    }
+    footer .copyright p {
+        font-size: 1.4rem;
     }
 }
