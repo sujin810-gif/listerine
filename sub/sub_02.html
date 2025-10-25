@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
-<body class="sub_02">
+<body>
     <!-- Navigation -->
     <nav>
         <div class="menu">
@@ -35,100 +35,103 @@
                 </li>
             </ul>
         </div>
-        <div class="hamburger"></div>
         <div class="buy"><a href="javascript:void()"><img src="../images/ico_buy.png" alt="">BUY</a></div>
     </nav>
+    <div class="hamburger"></div>
     <header>
         <h1 style="cursor:pointer;"><a href="../index.html"><img src="../images/logo.svg" alt=""></a></h1>
     </header>
     <!-- 제품 설명 메인 비주얼 -->
-    <section class="vs">
-        <div class="prd_vs"></div>
-        <div class="letter">
-            <div><span>순한맛</span><span>기본향</span></div>
-            <div class="tit">리스테린®액 토탈케어 마일드</div>
-            <ul class="accordion">
-                <li>
-                    <a href="javascript:void()">6 in 1 토탈케어<div class="img"><img src="../images/arrow_moreview.png" alt=""></div></a>
-                    <div class="acc_cont">
-                        <p>1. 충치예방<br>2. 구강 내 유해균 억제<br>3. 프라그 예방 및 감소<br>4. 잇몸염(치은염) 예방 및 감소<br>5. 치석생성예방 및 감소<br>6. 구취제거
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <a href="javascript:void()">성분표 보기<div class="img"><img src="../images/arrow_moreview.png" alt=""></div></a>
-                    <div class="acc_cont">
-                        <img src="../images/labeling.svg" alt="">
-                    </div>
-                </li>
-            </ul>
-            <div><a href="javascript:void()">WHERE TO BUY<img src="/images/where_ico.png" alt=""></a></div>
-        </div>
-    </section>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const items = document.querySelectorAll(".accordion li");
-
-            items.forEach((item) => {
-                const header = item.querySelector("a");
-                const content = item.querySelector(".acc_cont");
-
-                header.addEventListener("click", () => {
-                    const isActive = item.classList.contains("active");
-
-                    // 다른 아이템 닫기
-                    items.forEach(i => {
-                        i.classList.remove("active");
-                        const c = i.querySelector(".acc_cont");
-                        c.style.maxHeight = null;
-                    });
-
-                    if (!isActive) {
-                        item.classList.add("active");
-                        content.style.maxHeight = content.scrollHeight + "px";
-                    }
-                });
-            });
-        });
-    </script>
-
-    <section class="sub_02_cont">
-        <div class="dt_wrap">
-            <p>리스테린®액 토탈케어 마일드 </p>
-            <p>리스테린 토탈케어 마일드는 6가지 베네핏을 제공하여 더욱 뛰어난 구강 건강 개선 효과를 경험할 수 있습니다.<br>순한맛으로 처음 사용하는 분들도 편안하게 사용할 수 있습니다.</p>
-        </div>
-        <div>
-            <div class="use">
-                <span class="border">사용방법</span>
-                <div>
-                    <div>
-                        <span>용법&#183;용량</span>
-                        <div class="DD">
-                            <p>1일 2회(아침, 저녁) 사용.<br>1회 사용 시 20밀리리터로 약 30초간 충분히 입안을 헹군 후 뱉어 내십시오.</p>
-                            <p>사용 후, 입안을 물로 헹구실 필요가 없습니다.</p>
-                        </div>
-                    </div>
-                    <div>
-                        <span>저장방법</span>
-                        <div class="DD"><p>기밀 용기, 실온 (1-30'C) 보관</p></div>
-                    </div>
-                    <div>
-                        <span>Tip</span>
-                        <div class="DD"><p>처음 사용하시는 분은 사용 시간과 용량을 줄여서 사용하시고, 점차 시간과 양을 사용법에 맞게 증가시키면 제품에 적응하시는 데 도움이 됩니다</p></div>
-                    </div>
+    <div class="sub_02">
+        <section class="vs">
+            <div class="prd_vs_wrap">
+                <div class="prd_vs"></div>
+                <div class="letter">
+                    <div><span>순한맛</span><span>기본향</span></div>
+                    <div class="tit">리스테린®액 토탈케어 마일드</div>
+                    <ul class="accordion">
+                        <li>
+                            <a href="javascript:void()">6 in 1 토탈케어<div class="img"><img src="../images/arrow_moreview.png" alt=""></div></a>
+                            <div class="acc_cont">
+                                <p>1. 충치예방<br>2. 구강 내 유해균 억제<br>3. 프라그 예방 및 감소<br>4. 잇몸염(치은염) 예방 및 감소<br>5. 치석생성예방 및 감소<br>6. 구취제거
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="javascript:void()">성분표 보기<div class="img"><img src="../images/arrow_moreview.png" alt=""></div></a>
+                            <div class="acc_cont">
+                                <img src="../images/labeling.svg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                    <div><a href="javascript:void()">WHERE TO BUY<img src="/images/where_ico.png" alt=""></a></div>
                 </div>
             </div>
-            <div class="danger">
-                <span class="border">주의사항</span>
-                <div><p>1. 12세 이하의 어린이에게는 사용하지 말 것.<br>2. 정해진 용법용량을 잘 지킬 것.<br>3. 어린이의 손이 닿지 않는 곳에 보관할 것.<br>4. 본 제품에는 불소가 함유되어 있으므로 마시지 말 것, 잘못 들이마셨을 경우에는 의사 또는 약사와 상의할 것.<br>5. 본 제품에는 벤조산 및 벤조산나트륨이 들어 있으며, 벤조산은 피부, 눈, 점막에 경미한 자극이 될 수 있다.<br>6. 본 제품의 구성성분에 과민증이 있는 환자는 사용하지 말 것.<br>7. 이 제품은 프로필렌글리콜을 함유하고 있으므로 이성분에 과민하거나 알레르기 병력이 있는 사람은 신중히 사용할 것.<br>8. 제품 사용 중에 이상반응 등이 나타날 경우 의사와 상의할 것.<br><span>* 사용자의 구강 상태 또는 제품의 특성상 구강 내에 하얀 이물질이 발생할 수 있으나, 이는 인체에 유해하지 않습니다.</span></p></div>
-            </div>
-            <div class="last">
-                제품에 대한 의견, 질문, 피드백 또는 제품의 부작용을 보고하려면 <a href="https://www.listerine.kr/contact-us">https://www.listerine.kr/contact-us</a> 를 방문해주세요.<br>검증된 연구 결과는 대표균을 사용한 In-Vitro Test 결과를 포함할 수 있습니다.
-            </div>
-        </div>
-        
-    </section>
+        </section>
+        <!-- 아코디언 -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const items = document.querySelectorAll(".accordion li");
 
+                items.forEach((item) => {
+                    const header = item.querySelector("a");
+                    const content = item.querySelector(".acc_cont");
+
+                    header.addEventListener("click", () => {
+                        const isActive = item.classList.contains("active");
+
+                        // 다른 아이템 닫기
+                        items.forEach(i => {
+                            i.classList.remove("active");
+                            const c = i.querySelector(".acc_cont");
+                            c.style.maxHeight = null;
+                        });
+
+                        if (!isActive) {
+                            item.classList.add("active");
+                            content.style.maxHeight = content.scrollHeight + "px";
+                        }
+                    });
+                });
+            });
+        </script>
+        <section class="sub_02_cont">
+            <div class="dt_wrap">
+                <p>리스테린®액 토탈케어 마일드 </p>
+                <p>리스테린 토탈케어 마일드는 6가지 베네핏을 제공하여 더욱 뛰어난 구강 건강 개선 효과를 경험할 수 있습니다.<br>순한맛으로 처음 사용하는 분들도 편안하게 사용할 수 있습니다.</p>
+            </div>
+            <div>
+                <div class="use">
+                    <span class="border">사용방법</span>
+                    <div>
+                        <div>
+                            <span>용법&#183;용량</span>
+                            <div class="DD">
+                                <p>1일 2회(아침, 저녁) 사용.<br>1회 사용 시 20밀리리터로 약 30초간 충분히 입안을 헹군 후 뱉어 내십시오.</p>
+                                <p>사용 후, 입안을 물로 헹구실 필요가 없습니다.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span>저장방법</span>
+                            <div class="DD"><p>기밀 용기, 실온 (1-30'C) 보관</p></div>
+                        </div>
+                        <div>
+                            <span>Tip</span>
+                            <div class="DD"><p>처음 사용하시는 분은 사용 시간과 용량을 줄여서 사용하시고, 점차 시간과 양을 사용법에 맞게 증가시키면 제품에 적응하시는 데 도움이 됩니다</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="danger">
+                    <span class="border">주의사항</span>
+                    <div><p>1. 12세 이하의 어린이에게는 사용하지 말 것.<br>2. 정해진 용법용량을 잘 지킬 것.<br>3. 어린이의 손이 닿지 않는 곳에 보관할 것.<br>4. 본 제품에는 불소가 함유되어 있으므로 마시지 말 것, 잘못 들이마셨을 경우에는 의사 또는 약사와 상의할 것.<br>5. 본 제품에는 벤조산 및 벤조산나트륨이 들어 있으며, 벤조산은 피부, 눈, 점막에 경미한 자극이 될 수 있다.<br>6. 본 제품의 구성성분에 과민증이 있는 환자는 사용하지 말 것.<br>7. 이 제품은 프로필렌글리콜을 함유하고 있으므로 이성분에 과민하거나 알레르기 병력이 있는 사람은 신중히 사용할 것.<br>8. 제품 사용 중에 이상반응 등이 나타날 경우 의사와 상의할 것.<br><span>* 사용자의 구강 상태 또는 제품의 특성상 구강 내에 하얀 이물질이 발생할 수 있으나, 이는 인체에 유해하지 않습니다.</span></p></div>
+                </div>
+                <div class="last">
+                    제품에 대한 의견, 질문, 피드백 또는 제품의 부작용을 보고하려면 <a href="https://www.listerine.kr/contact-us" target="_blank">https://www.listerine.kr/contact-us 를 방문해주세요.<br>검증된 연구 결과는 대표균을 사용한 In-Vitro Test 결과를 포함할 수 있습니다.
+                </div>
+            </div>
+            
+        </section>
+    </div>
     <!-- 푸터 -->
     <footer class="sub_footer">
         <div class="sns">
