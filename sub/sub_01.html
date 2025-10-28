@@ -14,23 +14,23 @@
     <nav>
         <div class="menu">
             <ul>
-                <li><a href="javascript:void()">Brand</a></li>
-                <li><a href="sub_01.html">Products</a></li>
+                <li><a href="javascript:void()"><p>Brand</p></a></li>
+                <li><a href="#"><p>Products</p></a></li>
                 <li>
-                    <a href="javascript:void()">Oral Care</a>
+                    <a href="javascript:void()"><p>Oral Care</p></a>
                     <ul class="submenu">
-                        <li><a href="javascript:void()">구취</a></li>
-                        <li><a href="javascript:void()">잇몸질환</a></li>
-                        <li><a href="javascript:void()">플라그</a></li>
-                        <li><a href="javascript:void()">치아 미백</a></li>
+                        <li><a href="javascript:void()"><p>구취</p></a></li>
+                        <li><a href="javascript:void()"><p>잇몸질환</p></a></li>
+                        <li><a href="javascript:void()"><p>플라그</p></a></li>
+                        <li><a href="javascript:void()"><p>치아 미백</p></a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript:void()">Why LISTERINE?</a>
+                    <a href="javascript:void()"><p>Why LISTERINE?</p></a>
                     <ul class="submenu">
-                        <li><a href="javascript:void()">구강청결제의 필요성</a></li>
-                        <li><a href="javascript:void()">어린이 안전캡</a></li>
-                        <li><a href="javascript:void()">친환경적 발걸음</a></li>
+                        <li><a href="javascript:void()"><p>구강청결제의 필요성</p></a></li>
+                        <li><a href="javascript:void()"><p>어린이 안전캡</p></a></li>
+                        <li><a href="javascript:void()"><p>친환경적 발걸음</p></a></li>
                     </ul>
                 </li>
             </ul>
@@ -47,10 +47,10 @@
         <div id="header">
             <ul>
                 <li><a href="javascript:void()">Brand</a></li>
-                <li><a href="sub/sub_01.html">Products</a></li>
+                <li><a href="#">Products</a></li>
                 <li>
                     <a href="javascript:void()">Oral Care</a>
-                    <ul class="submenu">
+                    <ul class="hbg_submenu">
                         <li><a href="javascript:void()">구취</a></li>
                         <li><a href="javascript:void()">잇몸질환</a></li>
                         <li><a href="javascript:void()">플라그</a></li>
@@ -59,18 +59,40 @@
                 </li>
                 <li>
                     <a href="javascript:void()">Why LISTERINE?</a>
-                    <ul class="submenu">
+                    <ul class="hbg_submenu">
                         <li><a href="javascript:void()">구강청결제의 필요성</a></li>
                         <li><a href="javascript:void()">어린이 안전캡</a></li>
                         <li><a href="javascript:void()">친환경적 발걸음</a></li>
                     </ul>
                 </li>
             </ul>
+            <div class="buy"><a href="javascript:void()">BUY</a></div>
         </div>
     </div>
     <header>
         <h1 style="cursor:pointer;"><a href="../index.html"><img src="../images/logo.svg" alt=""></a></h1>
     </header>
+    <script>
+        document.querySelectorAll('#header > ul > li > a').forEach(a => {
+            a.addEventListener('click', e => {
+                const submenu = a.nextElementSibling;
+                if (submenu && submenu.classList.contains('hbg_submenu')) {
+                    e.preventDefault(); // 링크 이동 방지
+
+                    // 이미 열려 있는 경우 닫기
+                    if (submenu.classList.contains('open')) {
+                        submenu.style.maxHeight = submenu.scrollHeight + 'px'; // 현재 높이 고정
+                        submenu.offsetHeight; // 강제 리플로우 (트랜지션 자연스럽게 작동하게)
+                        submenu.style.maxHeight = '0'; // 닫기 애니메이션
+                        submenu.classList.remove('open');
+                    } else {
+                        submenu.classList.add('open');
+                        submenu.style.maxHeight = submenu.scrollHeight + 'px'; // 내용 높이만큼 열기
+                    }
+                }
+            });
+        });
+    </script>
     <section class="sub_01_sc">
         <div class="tit_wrap">
             <div class="tit" id="sub_tit">PRODUCTS</div>
@@ -109,7 +131,7 @@
                     </a>
                 </li>
                 <li data-category="total,strong,basic">
-                    <a href="javascript:void(0)" class="card">
+                    <a href="sub_02.html" class="card">
                         <div class="img"><img src="../images/prd_deeppurple.webp" alt=""></div>
                         <div class="letter">
                             <p>리스테린®액<br>토탈케어 플러스</p>
@@ -123,7 +145,7 @@
                         </div>
                     </a>
                 </li><li data-category="mild,gum,basic">
-                    <a href="javascript:void(0)" class="card">
+                    <a href="sub_02.html" class="card">
                         <div class="img"><img src="../images/prd_yellow.webp" alt=""></div>
                         <div class="letter">
                             <p>리스테린®액<br>토탈케어 검케어 마일드</p>
@@ -137,7 +159,7 @@
                         </div>
                     </a>
                 </li><li data-category="mild,cavity,basic">
-                    <a href="javascript:void(0)" class="card">
+                    <a href="sub_02.html" class="card">
                         <div class="img"><img src="../images/prd_ocean.webp" alt=""></div>
                         <div class="letter">
                             <p>리스테린®액<br>토탈케어<br>캐비티케어 마일드</p>
@@ -151,7 +173,7 @@
                         </div>
                     </a>
                 </li><li data-category="strong,smile,basic">
-                    <a href="javascript:void(0)" class="card">
+                    <a href="sub_02.html" class="card">
                         <div class="img"><img src="../images/prd_white.webp" alt=""></div>
                         <div class="letter">
                             <p>리스테린®액<br>토탈케어 헬씨브라이트</p>
@@ -165,7 +187,7 @@
                         </div>
                     </a>
                 </li><li data-category="total,mild,flavored">
-                    <a href="javascript:void(0)" class="card">
+                    <a href="sub_02.html" class="card">
                         <div class="img"><img src="../images/prd_green.webp" alt=""></div>
                         <div class="letter">
                             <p>리스테린®액<br>내추럴 그린티 마일드</p>
@@ -179,7 +201,7 @@
                         </div>
                     </a>
                 </li><li data-category="total,strong,flavored">
-                    <a href="javascript:void(0)" class="card">
+                    <a href="sub_02.html" class="card">
                         <div class="img"><img src="../images/prd_deepblue.webp" alt=""></div>
                         <div class="letter">
                             <p>리스테린®액<br>쿨민트 마우스워시</p>
@@ -193,7 +215,7 @@
                         </div>
                     </a>
                 </li><li data-category="total,mild,flavored">
-                    <a href="javascript:void(0)" class="card">
+                    <a href="sub_02.html" class="card">
                         <div class="img"><img src="../images/prd_blue.webp" alt=""></div>
                         <div class="letter">
                             <p>리스테린®액<br>쿨민트 마일드</p>
@@ -207,7 +229,7 @@
                         </div>
                     </a>
                 </li><li data-category="total,strong,flavored">
-                    <a href="javascript:void(0)" class="card">
+                    <a href="sub_02.html" class="card">
                         <div class="img"><img src="../images/prd_deepgreen.webp" alt=""></div>
                         <div class="letter">
                             <p>리스테린®액<br>후레쉬 버스트</p>
@@ -221,7 +243,7 @@
                         </div>
                     </a>
                 </li><li data-category="total,strong,flavored">
-                    <a href="javascript:void(0)" class="card">
+                    <a href="sub_02.html" class="card">
                         <div class="img"><img src="../images/prd_orange.webp" alt=""></div>
                         <div class="letter">
                             <p>리스테린®액<br>마우스워시 시트러스향</p>

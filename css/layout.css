@@ -52,17 +52,18 @@ a { color: #1c1c1c; text-decoration: none;}
 .main_container {background-color: #B36BD0; width: 100%; height: 100vh; padding-bottom: 80px; box-sizing: border-box; position: fixed;}
 /* 헤더 */
 header {position: fixed; z-index: 1; display: flex; justify-content: space-between; left: max(0px, calc((100vw - 1300px)/2)); }
-header h1 {width: 204px; height: 70px; border-radius: 15px; background-color: #fff; display: flex; align-items: center; justify-content: center; margin-top: 40px; border: 1.2px solid #B7B7B7;}
-header h1:hover {background-color: #FFD942;}
-header h1 img {width: 168px; height: 32px; }
+header h1 a {width: 204px; height: 70px; border-radius: 15px; background-color: #fff; display: flex; align-items: center; justify-content: center; margin-top: 40px; border: 1.2px solid #B7B7B7;}
+header h1 a:hover {background-color: #FFD942;}
+header h1 a img {width: 168px; height: 32px; }
 
 /* 네비 */
 nav {display: flex; margin-top: 40px; position: fixed; z-index: 999 ; right: max(0px, calc((100vw - 1300px)/2)); }
-nav ul {display: flex; background-color: #fff; padding: 23px 72px; box-sizing: border-box; border-radius: 40px; align-items: center; justify-content: center; gap: 60px; border: 1.2px solid #B7B7B7;}
-nav ul li a {font-size: 2rem; font-weight: 800; position: relative;}
+nav ul {display: flex; background-color: #fff; padding: 3px 52px; box-sizing: border-box; border-radius: 40px; align-items: center; justify-content: center; gap: 20px; border: 1.2px solid #B7B7B7;}
+nav ul li a { padding: 20px 20px; box-sizing: border-box;}
+nav ul li a p {font-size: 2rem; font-weight: 800; position: relative;}
 /* 밑줄 효과 */
-nav ul li a::after {content: ""; position: absolute; left: 0; top: 100%; width: 100%; height: 2px; background-color: #1c1c1c; transform: scale(0); transition: transform 0.5s; transform-origin: left;}
-nav ul li:hover > a::after {transform: scale(1); transform-origin: left;}
+nav ul li a p::after {content: ""; position: absolute; left: 0; top: 100%; width: 100%; height: 2px; background-color: #1c1c1c; transform: scale(0); transition: transform 0.5s; transform-origin: left;}
+nav ul li a:hover > p::after {transform: scale(1); transform-origin: left;}
 
 nav .buy {border: none; border-radius: 40px; width: 132px; height: 70px; background-color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: .1s; border: 1.2px solid #B7B7B7;}
 nav .buy a {font-size: 2rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; }
@@ -84,10 +85,10 @@ nav ul li {display: flex; flex-direction: column; position: relative;}
 nav ul li:hover {transition-duration: 0.5s; }
 nav ul li:hover .submenu {display: flex; height: auto; opacity: 1; visibility: visible; transform: translateY(0);}
 
-.submenu {display: none; flex-direction: column; gap: 25px; border-radius: 20px; position: absolute; width: auto; height: auto; top: 100%; padding: 30px 30px; box-sizing: border-box; background-color: #fff; border: none; opacity: 0; visibility: hidden; transform: translateY(-5px); transition: all 0.3s ease-in-out; border: 1.2px solid #1c1c1c;}
-.submenu li a {font-weight: 500; font-size: 1.9rem; color: #272727; line-height: 150%; white-space: nowrap;}
-.submenu li a::after {content: ""; position: absolute; left: 0; top: 100%; width: 100%; height: 2px; background-color: #272727; transform: scale(0); transition: transform 0.5s; transform-origin: left;}
-.submenu li:hover > a::after {transform: scale(1); transform-origin: left;}
+.submenu {display: none; flex-direction: column; gap: 5px; border-radius: 20px; position: absolute; width: auto; height: auto; top: 90%; padding: 10px 10px; box-sizing: border-box; background-color: #fff; border: none; opacity: 0; visibility: hidden; transform: translateY(-5px); transition: all 0.3s ease-in-out; border: 1.2px solid #1c1c1c;}
+.submenu li a p {font-weight: 500; font-size: 1.9rem; color: #272727; line-height: 150%; white-space: nowrap;}
+.submenu li a p::after {content: ""; position: absolute; left: 0; top: 100%; width: 100%; height: 2px; background-color: #272727; transform: scale(0); transition: transform 0.5s; transform-origin: left;}
+.submenu li a:hover > p::after {transform: scale(1); transform-origin: left;}
 
 /* 햄버거 */
 
@@ -289,8 +290,8 @@ input[id="icon"]:checked + label > span:nth-child(3) {
 
 
 /* 제품 */
-.content {width: 100%; height: 1200px; border-radius: 80px 80px 0 0; background-color: #A2E0E2; position: absolute; top: 1080px; left: 50%; transform: translateX(-50%);}
-.Products .tit {font-size: 4.8rem; font-weight: 800; text-align: center; margin-top: 160px; margin-bottom: 80px;}
+.content {width: 100%; height: 1200px; border-radius: 80px 80px 0 0; background-color: #A2E0E2; position: absolute; top: 1080px; left: 50%; margin-left: -50%;}
+.Products .tit {font-size: 4.8rem; font-weight: 800; text-align: center; margin-top: 160px; margin-bottom: 20PX;}
 
 .Products .items {width: auto; margin: 0 auto;}
 .Products .slider {display: flex; max-width: 970px; margin: 0 auto;}
@@ -298,7 +299,6 @@ input[id="icon"]:checked + label > span:nth-child(3) {
 .Products .slider li.active {
     opacity: 1;
     transform: translateY(0) scale(1);
-    
 }
 
 .Products .slider li a {width: 310px; height: 480px; background-color: #fff; display: flex; flex-direction: column; border-radius: 40px; margin: 0 auto; transition: transform .15s ease;}
@@ -329,10 +329,13 @@ input[id="icon"]:checked + label > span:nth-child(3) {
 /* --- 카드 뒤집힘 효과 --- */
 .flip-card {
     width: 310px;
-    height: 480px;
+    height: 530px;
     perspective: 1000px;
     margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
 }
+
 
 .flip-inner {
     position: relative;
@@ -359,6 +362,8 @@ input[id="icon"]:checked + label > span:nth-child(3) {
 
 /* 앞면 기존 스타일 유지 */
 .flip-front {
+    width: 100%;
+    height: 100%;
     background-color: #fff;
 }
 
@@ -383,6 +388,8 @@ input[id="icon"]:checked + label > span:nth-child(3) {
     color: #ffffff;
 }
 
+
+
 /* 기존 hover 효과 제거 (겹침 방지) */
 .Products .slider li a:hover img {
     transform: none;
@@ -391,7 +398,7 @@ input[id="icon"]:checked + label > span:nth-child(3) {
 
 
 /* 왜 리스테린? */
-.reason_wrap {width: 100%; height: 980px; background: #169056; border-radius: 80px; position: absolute; margin-top: 80px; overflow: hidden; left: 50%; transform: translateX(-50%);}
+.reason_wrap {width: 100%; height: 980px; background: #169056; border-radius: 80px; position: absolute; margin-top: 80px; overflow: hidden; left: 50%; margin-left: -50%;}
 
 .reason {max-width: 1300px; margin: 0 auto; display: flex; flex-direction: column;}
 .reason .tit {font-size: 6.4rem; font-family: 'Taenada'; color: #FFF5CE; margin-top: 13%; opacity: 0; transform: translateY(30px); transition: opacity 1s, transform 2s;}
@@ -678,7 +685,8 @@ footer .copyright p {margin-top: 5px;}
 /* 반응형 */
 @media only screen and (max-width: 1400px) {
     nav ul {
-        gap: 30px
+        gap: 0px;
+        padding: 3px 42px;
     }
     .main_container {
         padding: 0 100px;  box-sizing: border-box;
@@ -704,7 +712,9 @@ footer .copyright p {margin-top: 5px;}
     .content {padding: 0 50px; box-sizing: border-box; height: 1000px;}
     .Products .slider {max-width: 850px; }
     .Products .slider li a {width: 270px; height: 418px;}
-    .flip-card {width: 270px; height: 418px;}
+    .Products .slider li a img {transform: scale(.8); margin-top: -15px;}
+    .Products .slider li a:hover img {transform: scale(.8);}
+    .flip-card {width: 270px; height: 448px;}
     .Products .indi {padding: 0 50px; box-sizing: border-box; top: 250px;}
     .Products .slider li a > div {gap: 5px;bottom: 15px; margin-left: 15px;}
     .Products .items {margin-top: -50px;}
@@ -808,8 +818,7 @@ footer .copyright p {margin-top: 5px;}
     .content {border-radius: 60px 60px 0 0;}
     .Products .slider {max-width: 600px; }
     .Products .slider li a {width: 600px; height: 400px;}
-    .flip-card {width: 600px; height: 400px;}
-    .Products .slider li img {margin-top: 10px;}
+    .flip-card {width: 600px; height: 440px;}
     .Products .slider li a > div {gap: 8px; bottom: 25px; margin-left: 25px;}
     /*  왜? */
     .reason_wrap {border-radius: 60px 60px 60px 60px}
@@ -822,6 +831,9 @@ footer .copyright p {margin-top: 5px;}
         padding: 0 100px;
     }
     /* 서브01 */
+    .sub_01_sc .prd .card {
+        max-width: 800px;
+    }
     .sub_01_sc {
         padding-top: 230px;
     }
