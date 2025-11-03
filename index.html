@@ -12,9 +12,10 @@
     
 </head>
 <body>
+    <a href="#main_vs" class="blind">본문으로 넘어가기</a>
     <!-- Navigation -->
     <header>
-        <h1><a href="#"><img src="images/logo.svg" alt=""></a></h1>
+        <h1><a href="index.html" aria-label="홈페이지로 돌아가기"><img src="images/logo.svg" alt=""></a></h1>
         <nav>
             <div class="menu">
                 <ul>
@@ -98,6 +99,7 @@
     <!-- Main Visual -->
     <div class="main_container" id="slider">
         <section class="main_vs">
+            <h2 class="blind">리스테린 메인 비주얼</h2>
             <div class="main_img"><img src="images/main_vs_img.png" alt=""></div>
             <div class="letter">
                 <div class="txt_wrap">
@@ -112,6 +114,7 @@
     </div>
     <!-- Products -->
     <section class="content" id="overflow">
+        <h2 class="blind">리스테린 컨텐츠 감싸기</h2>
         <div class="Products">
             <div class="tit" id="products-tit">Products</div>
             <div class="items">
@@ -252,7 +255,7 @@
 
             <!-- 슬라이더 -->
             <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-            <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
             <script>
                 $('.slider').slick({
                     infinite: true,
