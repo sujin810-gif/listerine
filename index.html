@@ -336,9 +336,9 @@
                 const triggerPoint = 950; // 스크롤 위치 (px)
 
                 if (window.scrollY > triggerPoint) {
-                    box.style.opacity = 1; // 나타나게 함
+                    box.style.display = 'block'; // 나타나게 함
                 } else {
-                    box.style.opacity = 0; // 다시 숨김
+                    box.style.display = 'none'; // 다시 숨김
                 }
             });
         </script>
